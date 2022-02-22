@@ -14,7 +14,7 @@ bot.start((ctx) => ctx.reply(`Привет ${ctx.message.from.first_name ? ctx.m
 bot.hears('✍️ Заказать', async (ctx) => {
   try {
     await ctx.reply('Если Вы еще ничего у нас не заказывали, то у нас для вас подарок 🤩 - 10 % скидка на формат А3 (30х40 см) \r\nНапишите нам нажав на кнопку ниже.', Markup.inlineKeyboard(
-      [Markup.button.url('Написать письмо', 'telegram.com')]))
+      [Markup.button.url('Написать', 'telegram.com')]))
   } catch (e) {
     console.error(e)
   }
@@ -197,7 +197,7 @@ bot.action('btnp_3', async (ctx) => {
     await ctx.replyWithPhoto({ source: './img/portfolio/4.jpg' })
     await ctx.replyWithHTML('<b>Цены</b>', Markup.inlineKeyboard(
       [
-        [Markup.button.callback('Вначало', 'btnp_4')]
+        [Markup.button.callback('Вначало', 'btnp_1')]
       ]
     ))
   } catch (e) {
