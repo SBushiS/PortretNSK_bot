@@ -14,7 +14,7 @@ bot.start((ctx) => ctx.reply(`Привет ${ctx.message.from.first_name ? ctx.m
 bot.hears('✍️ Заказать', async (ctx) => {
   try {
     await ctx.reply('Ели Вы еще ничего у нас не заказывали, то у нас для вас подарок 🤩 - 10 % скидка на формат А3 (30х40 см) \r\nНапишите нам нажав на кнопку ниже.', Markup.inlineKeyboard(
-      [Markup.button.url('Написать', 'https://t.me/e_isht')]))
+      [Markup.button.url('Написать', 'https://t.me/Suseng')]))
   } catch (e) {
     console.error(e)
   }
@@ -32,7 +32,7 @@ bot.hears('👩 Обо мне', async (ctx) => {
         "inline_keyboard": [
           [
             Markup.button.url('Вконтакте', 'https://vk.com/portrety_nsk'),
-            Markup.button.url('Telegram', 'https://t.me/e_isht')
+            Markup.button.url('Telegram', 'https://t.me/Suseng')
           ]
         ]
       })
@@ -200,9 +200,9 @@ bot.action('btn_10', async (ctx) => {
 
 bot.command('price', async (ctx) => {
   try {
-    await ctx.replyWithHTML('<b>Цены - средние по городу, а качество одно из лучших!</b>\r\n\r\nФорматы:А4 (20х30 см )- 3000 руб.\r\nА3 (30х40 см) - 4000 руб,\r\nА2 (40х50) - 5000 руб,\r\nА1 (50х60 ) - 6000 руб\r\n\r\n<b>Для больших семейных портретов возможен формат больше:</b>\r\nА0 (60х80) - 7000 руб)\r\n\r\nА также настоящий портрет маслом.\r\n<b>От 1го дня, даже в праздники и выходные!</b>', Markup.inlineKeyboard(
+    await ctx.replyWithHTML('<b>ЦЕНЫ АКТУАЛЬНЫ!</b>\r\n\r\n<b>~~~ 《 ЧЁРНО-БЕЛЫЕ 》~~~</b>\r\n● <u>ПОРТРЕТЫ Ч/Б КАРАНДАШОМ/УГЛЕМ А3 (30×40см)</u> - 2000 руб. (1 человек)\r\nВторой человек +1000 руб.\r\n\r\n\r\n<b>~~~《 ЦВЕТНЫЕ》~~~</b>\r\n❗☝Работы выполняются сухой пастелью. Обязательно оформление работы в рамку со стеклом!\r\n● <u>ШАРЖИ/ПОРТРЕТЫ А4 (20×30см)</u> - <b>2000 руб.</b> (1 человек)\r\nВторой человек <b>+800 руб.</b>\r\n\r\n● <u>ШАРЖИ/ПОРТРЕТЫ А3 (30×40см)</u> - <b>3000 руб.</b> (1человек)\r\nСледующий человек <b>+1000 руб.</b>\r\n\r\n● <u>ШАРЖИ/ПОРТРЕТЫ А2 (40×50см)</u> - <b>4000 руб.</b> (1человек)\r\nСледующий человек <b>+1000 руб.</b>\r\n\r\n● <u>ШАРЖИ/ПОРТРЕТЫ А1 (50×60см)</u> - <b>5000 руб.</b> (1человек)\r\nСледующий человек <b>+1000 руб.</b>\r\n\r\n<b>~~~ 《 ПОРТРЕТЫ МАСЛОМ 》 ~~~</b>\r\nСрок исполнения - от 1 недели. Желательно иметь в запасе не менее 3х недель.\r\n\r\n☝Обратите внимание: цены соответствуют качеству написания портретов маслом и НЕ завышены. Если вы хотите дешевле, то, пожалуйста, идите к другим художникам, сейчас их огромный выбор.\r\n\r\n● 30х40 - <b>6000 руб.</b>\r\n\● 35х50 - <b>7500 руб.</b>\r\n● 40х60 - <b>8500 руб.</b>\r\n● 50х70 - <b>10000 руб.</b>\r\n\● 60×80 - <b>12500 руб.</b>\r\n● 80×100 - <b>15000 руб.</b>\r\n\r\n- Следующий человек <b>+2000 руб.</b>\r\n- Портрет в образе <b>+4000 руб.</b>\r\n\r\n💳 Обязательна предоплата 50% на карту Сбербанка.', Markup.inlineKeyboard(
       [
-        [Markup.button.url('Закажите прямо сейчас!', 'https://t.me/e_isht')]
+        [Markup.button.url('Закажите прямо сейчас!', 'https://t.me/Suseng')]
       ]
     ))
   } catch (e) {
@@ -262,6 +262,90 @@ bot.action('btnp_3', async (ctx) => {
   try {
     await ctx.replyWithPhoto({ source: './img/portfolio/4.jpg' }, Markup.inlineKeyboard(
       [
+        [Markup.button.callback('Следующее фото', 'btnp_4')]
+      ]
+    ))
+  } catch (e) {
+    console.error(e)
+  }
+
+})
+bot.action('btnp_4', async (ctx) => {
+  try {
+    await ctx.replyWithPhoto({ source: './img/portfolio/5.jpg' }, Markup.inlineKeyboard(
+      [
+        [Markup.button.callback('Следующее фото', 'btnp_5')]
+      ]
+    ))
+  } catch (e) {
+    console.error(e)
+  }
+
+})
+bot.action('btnp_5', async (ctx) => {
+  try {
+    await ctx.replyWithPhoto({ source: './img/portfolio/6.jpg' }, Markup.inlineKeyboard(
+      [
+        [Markup.button.callback('Следующее фото', 'btnp_6')]
+      ]
+    ))
+  } catch (e) {
+    console.error(e)
+  }
+
+})
+bot.action('btnp_6', async (ctx) => {
+  try {
+    await ctx.replyWithPhoto({ source: './img/portfolio/7.jpg' }, Markup.inlineKeyboard(
+      [
+        [Markup.button.callback('Следующее фото', 'btnp_7')]
+      ]
+    ))
+  } catch (e) {
+    console.error(e)
+  }
+
+})
+bot.action('btnp_7', async (ctx) => {
+  try {
+    await ctx.replyWithPhoto({ source: './img/portfolio/8.jpg' }, Markup.inlineKeyboard(
+      [
+        [Markup.button.callback('Следующее фото', 'btnp_8')]
+      ]
+    ))
+  } catch (e) {
+    console.error(e)
+  }
+
+})
+bot.action('btnp_8', async (ctx) => {
+  try {
+    await ctx.replyWithPhoto({ source: './img/portfolio/9.jpg' }, Markup.inlineKeyboard(
+      [
+        [Markup.button.callback('Следующее фото', 'btnp_9')]
+      ]
+    ))
+  } catch (e) {
+    console.error(e)
+  }
+
+})
+bot.action('btnp_9', async (ctx) => {
+  try {
+    await ctx.replyWithPhoto({ source: './img/portfolio/10.jpg' }, Markup.inlineKeyboard(
+      [
+        [Markup.button.callback('Следующее фото', 'btnp_10')]
+      ]
+    ))
+  } catch (e) {
+    console.error(e)
+  }
+
+})
+bot.action('btnp_10', async (ctx) => {
+  try {
+    await ctx.replyWithPhoto({ source: './img/portfolio/11.jpg' }, Markup.inlineKeyboard(
+      [
         [Markup.button.callback('Вначало', 'btnp_1')]
       ]
     ))
@@ -270,6 +354,7 @@ bot.action('btnp_3', async (ctx) => {
   }
 
 })
+
 
 
 
